@@ -1,0 +1,481 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Realtor</title>
+
+		<style>
+		body
+		{ 
+			background-color:white;
+        }
+        .my-container{
+	
+            width:100%;
+            height:100%;            
+            position: relative;
+        }
+        .title{
+	
+            position: absolute;
+            left:0;
+            top:0;
+            width:100%;
+            height:50px;
+            background-color: #223377;
+            color:white;
+            font-size: 26px;
+            font-weight:bold;
+            line-height:50px;
+            padding-left:5px;
+            box-sizing: border-box;
+
+        }
+		.image1{ 
+			position: absolute;
+			left: 0px;
+			top: 60px;
+			width: 100%;
+			height: 100%;
+			
+		}
+		.main{
+			position: absolute;
+			width:800px;
+			height: 200px;
+			left:400px;
+			top: 60px;
+			background-color: #A9A9A9;
+		
+		}
+		.center 
+		{
+			margin: auto;
+			width: 60%;
+			border: 3px solid #73AD21;
+			padding: 10px;
+		}
+		
+		.main input
+		{	
+			width: 540px;
+			height: 47px;
+			box-sizing: border-box;
+			border: 2px solid #ccc;
+			border-radius: 4px;
+			font-size: 16px;
+			background-color: white;
+			left: 82px;
+			position: absolute;
+			top: 52px;
+		}
+		.main input[type=text] {
+		  padding: 10px;
+		  padding-left: 170px;
+		  margin-top: 8px;
+		  font-size: 17px;
+		  
+		}
+		.main input:focus{
+			border-color: #66afe9;
+			outline: 0;
+			-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+			box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+		}
+		.main button
+		{
+			position:absolute;
+			right:83px;
+            top: 60px;
+			-webkit-transition-duration: 0.4s;
+   			transition-duration: 0.4s;
+            color: black;
+			box-sizing: border-box;
+			border: 2px solid #ccc;
+			border-radius: 4px;
+			width: 100px;
+			height: 47px;
+		}
+		.main button:hover{
+			background-color: #04469180;
+    		color: white;
+		}
+
+		.main #select
+		{
+			position: absolute;
+			width: 160px;
+			height: 47px;
+			left: 82px;
+			top: 60px;
+			box-sizing: border-box;
+			border: 2px solid #ccc;
+			border-radius: 4px;
+			font-size: 16px;
+			background-color: white;
+			padding: 10px;
+		}
+		#t1{
+				visibility: hidden;
+				position: absolute;
+				top: 250px;
+				left: 400px;
+				width: 800px;
+			}
+		#t2{
+				visibility: hidden;
+				position: absolute;
+				top: 250px;
+				left: 400px;
+				width: 800px;
+			}
+		#t3{
+				visibility: hidden;
+				position: absolute;
+				top: 250px;
+				left: 400px;
+				width: 800px;
+			}
+		#t4{
+				visibility: hidden;
+				position: absolute;
+				top: 250px;
+				left: 400px;
+				width: 800px;
+		}
+		#t5{
+				visibility: hidden;
+				position: absolute;
+				top: 250px;
+				left: 400px;
+				width: 800px;
+		}
+		#t6{
+				visibility: hidden;
+				position: absolute;
+				top: 250px;
+				left: 400px;
+				width: 800px;
+		}
+		table{
+				bottom: 30px;
+		}
+		 th {
+			background: #ddd;
+   			border-bottom: 1px solid #666 ;
+			height: 42px;
+			width: 200px;
+			text-align: center;
+		}		
+		tr {
+				background: white;
+			}		
+		td {
+				width: 200px;
+				height: 41px;
+				line-height: 25px;
+				text-align: center;
+				border: 1px solid #ccc;
+            }
+			tbody tr:hover {
+				color: #fff;
+				background: rgb(50, 109, 148);
+			}
+            .copyright{
+
+                position: absolute;
+                left:0;
+                bottom:0;
+                width:100%;
+                height:30px;
+                background-color: #223377;
+                color:white;
+                line-height:30px;
+                text-align: center;
+
+            }
+
+		</style>
+    </head>
+        <body>
+            <div class="my-container" >
+                <div class="title" align='center'>
+                    Realtor Search
+                </div>
+            </div>
+			<div class='image1' >
+				<image src='/static/pic/house4.jpg'  width="100%" height="100%" />
+			</div>
+            <div class="main">
+				<input id='search' type="text" placeholder="Enter" name="search">
+				<select id='select'>
+					<option value="City">City</option>
+					<option value="Price">Price</option>
+					<option value="Crime">Crime</option>
+					<option value="Postal">Postal</option>
+					<option value="School">School</option>
+					<option value="Bed">Bed</option>
+				</select>
+				<button type="submit" onclick='search_content()' id='button1'>SEARCH<width='100' height='30' /></i></button>
+			</div>
+            <div class='table' id='t1'>
+                <table border='1' cellspacing='0' id='table1'>
+						<tr> 
+							<th>City</th>
+							<th>State</th>
+							<th>Address</th>
+							<th>Postal</th>
+							<th>Price</th>
+							<th>Bed</th>
+							<th>Bath</th>
+						</tr>
+					<tbody id = "Mytable1"></tbody>
+                </table>
+            </div>
+			<div class='table2' id='t2'>
+                <table border='1' cellspacing='0' id='table2'>
+                    <tr>
+                        <th>City</th>
+                        <th>State</th>
+                        <th>Address</th>
+                        <th>Postal</th>
+                        <th>Price</th>
+						<th>Avg_Price</th>
+                        <th>Bed</th>
+                        <th>Bath</th>
+                    </tr>
+					<tbody id = "Mytable2"></tbody>
+
+                </table>
+            </div>
+            <div class='table3' id='t3'>
+                <table border='1' cellspacing='0' id='table3'>
+                    <tr>
+                        <th>   City   </th>
+                        <th>  Crime </th>
+                    </tr>
+                    <tr>
+                        <td ><div id='city'></div></td>
+                        <td ><div id='crime'></div></td>
+                    </tr>
+                </table>
+            </div>
+
+			<div class='table4' id='t4'>
+                <table border='1' cellspacing='0' id='table4'>
+                    <tr>
+                        <th>City</th>
+                        <th>State</th>
+                        <th>Address</th>
+                        <th>Postal</th>
+                        <th>Price</th>
+						<th>Sqft</th>
+                        <th>Bed</th>
+                        <th>Bath</th>
+                    </tr>
+					<tbody id = "Mytable4"></tbody>
+
+                </table>
+            </div>
+			<div class='table5' id='t5'>
+                <table border='1' cellspacing='0' id='table5'>
+                    <tr>
+                        <th>Address</th>
+                        <th>Price</th>
+						<th>Sqft</th>
+                        <th>School_district</th>
+                        <th>School</th>
+                    </tr>
+					<tbody id = "Mytable5"></tbody>
+
+                </table>
+            </div>
+			<div class='table6' id='t6'>
+                <table border='1' cellspacing='0' id='table6'>
+                    <tr>
+						<th>City</th>
+						<th>State</th>
+                        <th>Address</th>
+                        <th>Price</th>						
+						<th>Sqft</th>
+						<th>Avg_Sqft</th>
+                        <th>Bed</th>
+                        <th>Bath</th>
+                    </tr>
+					<tbody id = "Mytable6"></tbody>
+                </table>
+            </div>
+
+        <script>
+            function search_content(){
+                var select = document.getElementById('select');
+                var select_value = select.options[select.selectedIndex].text
+                var input = document.getElementById('search')
+                console.log(select_value)
+                var element = input.value
+                console.log(element)
+                var Realtor_db = {{result|safe}};
+                var Crime_db = {{result1|safe}};
+
+                if (select_value == 'City'){
+					
+					var Mytable1 = document.getElementById('Mytable1');
+					let row = '';
+					for (var x in Realtor_db){
+						if (Realtor_db[x]['city'] == element){
+							row +="<tr>";
+							row +="<td>" + Realtor_db[x]['city'] +"</td>";
+							row +="<td>" + Realtor_db[x]['state'] +"</td>";
+							row +="<td>" + Realtor_db[x]['address']  +"</td>";
+							row +="<td>" + Realtor_db[x]['postal_code']  +"</td>";
+							row +="<td>" + Realtor_db[x]['price'] +"</td>";
+							row +="<td>" + Realtor_db[x]['beds'] +"</td>";
+							row +="<td>" + Realtor_db[x]['baths'] +"</td></tr>";
+						}
+					
+					}
+					
+					Mytable1.innerHTML = row;
+                t1.style.visibility = 'visible';
+				t2.style.visibility = 'hidden';
+				t3.style.visibility = 'hidden';
+				t4.style.visibility = 'hidden';
+				t5.style.visibility = 'hidden';
+				t6.style.visibility = 'hidden';
+
+				
+                }	
+				else if (select_value == 'Price'){
+					var Mytable2 = document.getElementById('Mytable2');
+					let row = '';
+					for (var x in Realtor_db){
+						if (Realtor_db[x]['price'].replace(/[$,]/g,'') == element){
+							row +="<tr>";
+							row +="<td>" + Realtor_db[x]['city'] +"</td>";
+							row +="<td>" + Realtor_db[x]['state'] +"</td>";
+							row +="<td>" + Realtor_db[x]['address']  +"</td>";
+							row +="<td>" + Realtor_db[x]['postal_code']  +"</td>";
+							row +="<td>" + Realtor_db[x]['price'] +"</td>";
+							row +="<td>" +parseInt(Realtor_db[x]['Avg_price(PCode)'])+"</td>";
+							row +="<td>" + Realtor_db[x]['beds'] +"</td>";
+							row +="<td>" + Realtor_db[x]['baths'] +"</td></tr>";
+						}
+					
+					}
+					
+					Mytable2.innerHTML = row;
+					t1.style.visibility = 'hidden';
+					t2.style.visibility = 'visible';
+					t3.style.visibility = 'hidden';
+					t4.style.visibility = 'hidden';
+					t5.style.visibility = 'hidden';
+					t6.style.visibility = 'hidden';
+
+
+				}
+                else if (select_value == 'Crime'){
+                    var city = document.getElementById('city');
+                    var crime = document.getElementById('crime');
+                    for (x in Crime_db){
+                        if (Crime_db[x]['city'] == element){
+                        city.innerText = Crime_db[x]['city']
+                        crime.innerText = Crime_db[x]['crime_rate']
+                        }
+                    }
+					t1.style.visibility = 'hidden';
+					t2.style.visibility = 'hidden';
+                    t3.style.visibility = 'visible';
+					t4.style.visibility = 'hidden';
+					t5.style.visibility = 'hidden';
+					t6.style.visibility = 'hidden';
+
+			    }		
+				else if (select_value == 'Postal'){
+				
+					var Mytable4 = document.getElementById('Mytable4');
+					let row = '';
+					for (var x in Realtor_db){
+						if (Realtor_db[x]['postal_code'] == element){
+							row +="<tr>";
+							row +="<td>" + Realtor_db[x]['city'] +"</td>";
+							row +="<td>" + Realtor_db[x]['state'] +"</td>";
+							row +="<td>" + Realtor_db[x]['address']  +"</td>";
+							row +="<td>" + Realtor_db[x]['postal_code']  +"</td>";
+							row +="<td>" + Realtor_db[x]['price'] +"</td>";
+							row +="<td>" + Realtor_db[x]['sqft']+"</td>";
+							row +="<td>" + Realtor_db[x]['beds'] +"</td>";
+							row +="<td>" + Realtor_db[x]['baths'] +"</td></tr>";
+						}
+					
+					}
+					
+					Mytable4.innerHTML = row;
+					t1.style.visibility = 'hidden';
+					t2.style.visibility = 'hidden';
+                    t3.style.visibility = 'hidden';
+					t4.style.visibility = 'visible';
+					t5.style.visibility = 'hidden';
+					t6.style.visibility = 'hidden';
+
+					
+				}
+				else if (select_value == 'School'){
+					var Mytable5 = document.getElementById('Mytable5');
+					let row = '';
+					for (var x in Realtor_db){
+						if (Realtor_db[x]['Nearly_school'] == element){
+							row +="<tr>";
+							row +="<td>" + Realtor_db[x]['address'] +"</td>";
+							row +="<td>" + Realtor_db[x]['price'] +"</td>";
+							row +="<td>" + Realtor_db[x]['sqft']  +"</td>";
+							row +="<td>" + Realtor_db[x]['School_district']  +"</td>";
+							row +="<td>" + Realtor_db[x]['Nearly_school'] +"</td></tr>";
+						}
+					
+					}
+					
+					Mytable5.innerHTML = row;
+					t1.style.visibility = 'hidden';
+					t2.style.visibility = 'hidden';
+                    t3.style.visibility = 'hidden';
+					t4.style.visibility = 'hidden';
+					t5.style.visibility = 'visible';
+					t6.style.visibility = 'hidden';
+
+				}
+				else{
+					var Mytable6 = document.getElementById('Mytable6');
+					let row = '';
+					for (var x in Realtor_db){
+						if (Realtor_db[x]['beds'] == element){
+							row +="<tr>";
+							row +="<td>" + Realtor_db[x]['city'] +"</td>";
+							row +="<td>" + Realtor_db[x]['state'] +"</td>";
+							row +="<td>" + Realtor_db[x]['address']  +"</td>";
+							row +="<td>" + Realtor_db[x]['price'] +"</td>";
+							row +="<td>" + Realtor_db[x]['sqft']+"</td>";
+							row +="<td>" + parseInt(Realtor_db[x]['Avg_sqft(PCode)'])+"</td>";
+							row +="<td>" + Realtor_db[x]['beds'] +"</td>";
+							row +="<td>" + Realtor_db[x]['baths'] +"</td></tr>";
+						}
+					
+					}
+					
+					Mytable6.innerHTML = row;
+					t1.style.visibility = 'hidden';
+					t2.style.visibility = 'hidden';
+                    t3.style.visibility = 'hidden';
+					t4.style.visibility = 'hidden';
+					t5.style.visibility = 'hidden';
+					t6.style.visibility = 'visible';
+				}
+		}
+		</script>
+			<div> 
+			
+				<div class="content"></div>
+				<div class="copyright">&copy;Gangyu Pan</div>
+				
+			</div>
+        </body>
+            
+</html>

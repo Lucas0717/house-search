@@ -1,0 +1,101 @@
+city,state,crime_rate,chance_crime
+Detroit,MI,19.5,1 in 51
+St. Louis,MO,19.2,1 in 51
+Memphis,TN,19.0,1 in 52
+Baltimore,MD,19.0,1 in 53
+Monroe,LA,17.9,1 in 55
+Danville,IL,17.5,1 in 56
+Wilmington,DE,15.8,1 in 62
+Alexandria,LA,15.8,1 in 63
+Camden,NJ,15.7,1 in 63
+Scranton,PA,15.7,1 in 63
+Pine Bluff,AR,15.5,1 in 64
+Springfield,MO,15.3,1 in 65
+Little Rock,AR,15.3,1 in 65
+Saginaw,MI,15.2,1 in 65
+San Bernardino,CA,15.2,1 in 65
+Cleveland,OH,15.2,1 in 65
+Kansas City,MO,14.3,1 in 69
+Stockton,CA,14.1,1 in 70
+Canton,OH,13.9,1 in 71
+Chester,PA,13.8,1 in 72
+Albuquerque,NM,13.7,1 in 72
+Flint,MI,13.6,1 in 73
+Milwaukee,WI,13.5,1 in 73
+South Bend,IN,13.3,1 in 74
+Pontiac,MI,13.0,1 in 76
+Oakland,CA,12.9,1 in 77
+Kalamazoo,MI,12.7,1 in 78
+Anchorage,AK,12.4,1 in 80
+Spartanburg,SC,12.0,1 in 83
+Myrtle Beach,SC,11.9,1 in 83
+Rockford,IL,11.8,1 in 84
+Jackson,MI,11.6,1 in 86
+Florence,SC,11.6,1 in 86
+New Orleans,LA,11.6,1 in 86
+Compton,CA,11.5,1 in 86
+Newburgh,NY,11.5,1 in 86
+Daytona Beach,FL,11.4,1 in 87
+Trenton,NJ,11.4,1 in 87
+Battle Creek,MI,11.4,1 in 87
+Wichita,KS,11.4,1 in 87
+Lansing,MI,11.1,1 in 89
+Nashville,TN,11.1,1 in 90
+Houston,TX,11.0,1 in 90
+Albany,GA,10.9,1 in 91
+Odessa,TX,10.8,1 in 92
+Muskogee,OK,10.8,1 in 92
+Lake Worth,FL,10.7,1 in 93
+Chattanooga,TN,10.6,1 in 93
+Beaumont,TX,10.6,1 in 93
+Paragould,AR,10.5,1 in 94
+Sumter,SC,10.5,1 in 94
+Washington,DC,10.4,1 in 95
+Peoria,IL,10.4,1 in 95
+East St. Louis,IL,10.4,1 in 97
+Alton,IL,10.2,1 in 97
+Cleveland,TN,10.2,1 in 98
+Lubbock,TX,10.1,1 in 98
+Buffalo,NY,10.0,1 in 99
+Homestead,FL,9.9,1 in 100
+Tulsa,OK,9.8,1 in 96
+Riviera Beach,FL,9.8,1 in 101
+Fort Smith,AR,9.8,1 in 101
+Jackson,TN,9.7,1 in 103
+Miami Beach,FL,9.6,1 in 103
+North Charleston,SC,9.6,1 in 103
+Dayton,OH,9.6,1 in 103
+Jacksonville,AR,9.6,1 in 104
+Portsmouth,VA,9.5,1 in 104
+Toledo,OH,9.5,1 in 104
+Minneapolis,MN,9.5,1 in 104
+Baton Rouge,LA,9.5,1 in 105
+Salisbury,MD,9.5,1 in 105
+Chicago,IL,9.4,1 in 105
+Richmond,CA,9.4,1 in 106
+Monroe,NC,9.3,1 in 107
+Champaign,IL,9.3,1 in 107
+Lawton,OK,9.2,1 in 107
+Niagara Falls,NY,9.2,1 in 108
+Lauderdale Lakes,FL,9.1,1 in 109
+Springfield,MA,9.1,1 in 109
+Kankakee,IL,9.0,1 in 110
+Akron,OH,9.0,1 in 110
+Juneau,AK,9.0,1 in 110
+Harrisburg,PA,9.0,1 in 110
+New Haven,CT,9.0,1 in 111
+Dover,DE,8.9,1 in 111
+Desert Hot Springs,CA,8.8,1 in 113
+Muskegon,MI,8.8,1 in 113
+Dallas,TX,8.7,1 in 113
+North Las Vegas,NV,8.7,1 in 114
+Fayetteville,NC,8.6,1 in 115
+Corpus Christi,TX,8.6,1 in 115
+Bay City,MI,8.6,1 in 115
+Holyoke,MA,8.6,1 in 115
+Lancaster,CA,8.6,1 in 115
+Fall River,MA,8.6,1 in 115
+Hartford,CT,8.6,1 in 116
+Carbondale,IL,8.5,1 in 116
+Atlantic City,NJ,8.5,1 in 116
+Wheeling,WV,8.5,1 in 116
